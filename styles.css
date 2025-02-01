@@ -1,0 +1,119 @@
+/* Modern color palette variables */
+:root {
+  --primary: #4F46E5;
+  --secondary: #2D3250;
+  --accent: #7077A1;
+  --background: #F6F8FF;
+  --surface: #FFFFFF;
+  --text: #2D3250;
+  --shadow: rgba(45, 50, 80, 0.1);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  text-align: center;
+  background-color: var(--surface);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px var(--shadow);
+  max-width: 400px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+}
+
+.timer {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.controls button {
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+#start {
+  background-color: var(--primary);
+  color: white;
+  grid-column: span 2;
+}
+
+#start:hover {
+  background-color: #4338CA;
+}
+
+#pause {
+  background-color: var(--secondary);
+  color: white;
+}
+
+#pause:hover {
+  background-color: #232842;
+}
+
+#reset {
+  background-color: var(--accent);
+  color: white;
+}
+
+#reset:hover {
+  background-color: #5d6389;
+}
+
+#toggle {
+  background-color: var(--background);
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  grid-column: span 2;
+}
+
+#toggle:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 1.5rem;
+}
+
+#currentStatus {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0;
+} 

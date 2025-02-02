@@ -13,6 +13,10 @@ const pauseButton = document.getElementById('pause');
 const resetButton = document.getElementById('reset');
 const statusText = document.getElementById('currentStatus');
 const toggleButton = document.getElementById('toggle');
+const workSlider = document.getElementById('workSlider');
+const breakSlider = document.getElementById('breakSlider');
+const workValue = document.getElementById('workValue');
+const breakValue = document.getElementById('breakValue');
 
 function updateDisplay(timeInSeconds) {
     const minutes = Math.floor(timeInSeconds / 60);
@@ -93,4 +97,20 @@ toggleButton.textContent = 'Rest Mode';
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
-toggleButton.addEventListener('click', toggleMode); 
+toggleButton.addEventListener('click', toggleMode);
+workSlider.addEventListener('input', function() {
+    workValue.textContent = this.value;
+    workTime = this.value * 60;
+    if (isWorkTime) {
+        timeLeft = workTime;
+        updateDisplay(timeLeft);
+    }
+});
+breakSlider.addEventListener('input', function() {
+    breakValue.textContent = this.value;
+    breakTime = this.value * 60;
+    if (!isWorkTime) {
+        timeLeft = breakTime;
+        updateDisplay(timeLeft);
+    }
+}); 

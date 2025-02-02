@@ -21,6 +21,16 @@
         <div class="status">
             <p id="currentStatus">Work Time</p>
         </div>
+        <div class="settings">
+            <div class="slider-container">
+                <label for="workSlider">Work Time (minutes): <span id="workValue">25</span></label>
+                <input type="range" id="workSlider" min="1" max="60" value="25">
+            </div>
+            <div class="slider-container">
+                <label for="breakSlider">Break Time (minutes): <span id="breakValue">5</span></label>
+                <input type="range" id="breakSlider" min="1" max="30" value="5">
+            </div>
+        </div>
     </div>
     <audio id="timerSound">
         <source src="notification.mp3" type="audio/mpeg">

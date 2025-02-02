@@ -116,4 +116,42 @@ button:disabled {
   font-weight: 600;
   color: var(--accent);
   margin: 0;
+}
+
+.settings {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--background);
+    border-radius: 12px;
+}
+
+.slider-container {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--accent);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    border: none;
 } 

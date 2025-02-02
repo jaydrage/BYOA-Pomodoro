@@ -4,6 +4,8 @@ let breakTime = 5 * 60; // 5 minutes in seconds
 let isWorkTime = true;
 let timerId = null;
 
+const notificationSound = new Audio('notification.mp3');
+
 const minutesDisplay = document.getElementById('minutes');
 const secondsDisplay = document.getElementById('seconds');
 const startButton = document.getElementById('start');
@@ -38,6 +40,7 @@ function startTimer() {
         updateDisplay(timeLeft);
 
         if (timeLeft === 0) {
+            notificationSound.play();
             clearInterval(timerId);
             timerId = null;
             switchMode();

@@ -19,6 +19,7 @@ function updateDisplay(timeInSeconds) {
     const seconds = timeInSeconds % 60;
     minutesDisplay.textContent = minutes.toString().padStart(2, '0');
     secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+    document.title = `(${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}) Pomodoro Timer`;
 }
 
 function switchMode() {
